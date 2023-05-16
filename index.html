@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio site</title>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="script.js"></script>
+        <script src="https://kit.fontawesome.com/82c3fdaae8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--Nav-->
+        <nav class="nav">
+            <ul class="menu">
+                <li class="menu-item"><a href="#home">Home</a></li>
+                <li class="menu-item"><a href="#about">About</a></li>
+                <li class="menu-item"><a href="#portfolio">Portfolio</a></li>
+                <li class="menu-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!--Section Home-->
+        <section class="section-home" id="home">
+            <div class="section-home-a">
+                <p class="home-txt">Hello,</p>
+                <p class="home-txt home-txt-2"></p>
+            </div>
+            <!--Section End-->
+            <div class="section-end">
+                <p class="end-txt">About me</p>
+                <a class= "end-icon" href="#about">
+                    <i class="fa-solid fa-circle-down"></i>
+                </a>
+            </div>
+        </section>
+        <!--Section About-->
+        <section class="section-about" id="about">
+            <div class="section-about-a">
+                <div class="card card-me">
+                    <i class="fa-solid fa-user fa-2xl"></i>
+                    <div class="lines line-top"></div>
+                    <h3>Me</h3>
+                    <div class="lines line-bottom"></div>
+                    <p>I'm a computer science student with an interest in software development.</p>
+                    <p>Looking for the opportunity to engage and develop in this area.</p>
+                </div>
+                <div class="card card-skills">
+                    <i class="fa-solid fa-book fa-2xl"></i>
+                    <div class="lines line-top"></div>
+                    <h3>My skills</h3>
+                    <div class="lines line-bottom"></div>
+                    <div class="skills" style="padding-right: 12px;">
+                        <div class="skills-item">
+                            <div class="skill-info">
+                                <h3 class="skill-title">Git</h3>
+                                <h3 class="skill-percentage">60%</h3>
+                            </div>
+                            <div class="skill-bar-body">
+                                <div class="skill-bar" style="width: 60%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skills-item">
+                            <div class="skill-info">
+                                <h3 class="skill-title">HTML + CSS</h3>
+                                <h3 class="skill-percentage">50%</h3>
+                            </div>
+                            <div class="skill-bar-body">
+                                <div class="skill-bar" style="width: 50%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skills-item">
+                            <div class="skill-info">
+                                <h3 class="skill-title">JavaScript</h3>
+                                <h3 class="skill-percentage">65%</h3>
+                            </div>
+                            <div class="skill-bar-body">
+                                <div class="skill-bar" style="width: 65%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skills-item">
+                            <div class="skill-info">
+                                <h3 class="skill-title">Node.js</h3>
+                                <h3 class="skill-percentage">10%</h3>
+                            </div>
+                            <div class="skill-bar-body">
+                                <div class="skill-bar" style="width: 10%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skills-item">
+                            <div class="skill-info">
+                                <h3 class="skill-title">Java</h3>
+                                <h3 class="skill-percentage">60%</h3>
+                            </div>
+                            <div class="skill-bar-body">
+                                <div class="skill-bar" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-experience">
+                    <i class="fa-solid fa-user-tie fa-2xl"></i>
+                    <div class="lines line-top"></div>
+                    <h3>My experience</h3>
+                    <div class="lines line-bottom"></div>
+                    <div class="experience">
+                        <i class="fa-solid fa-person-digging fa-fade fa-2xl"></i>
+                    </div>
+                </div>
+            </div>
+            <!--Section End-->
+            <div class="section-end">
+                <p class="end-txt">My portfolio</p>
+                <a class= "end-icon" href="#portfolio">
+                    <i class="fa-solid fa-circle-down"></i>
+                </a>
+            </div>
+        </section>
+        <!--Section Portfolio-->
+        <section class="section-portfolio" id="portfolio">
+            <div class="section-portfolio-a">
+                <div class="portfolio-box">
+                    <div class="portfolio-filter">
+                        <h3>Languages</h3>
+                        <div class="options">
+                            <input type="checkbox" class="lang-check" id="htmlcss-check" value="htmlcss">
+                            <label for="htmlcss-check">HTML + CSS</label>
+                        </div>
+                        <div class="options">
+                            <input type="checkbox" class="lang-check" id="javascript-check" value="javascript">
+                            <label for="javascript-check">JavaScript</label>
+                        </div>
+                        <div class="options">
+                            <input type="checkbox" class="lang-check" id="java-check" value="java">
+                            <label for="java-check">Java</label>
+                        </div>
+
+                        <h3>Frameworks</h3>
+                        <div class="options">
+                            <input type="checkbox" class="frame-check" id="node.js-check" value="node.js">
+                            <label for="node.js-check">node.js</label>
+                        </div>
+
+                        <h3>Difficulty</h3>
+                        <div class="options">
+                            <input type="checkbox" class="dif-check" id="one-star-check" value="one-star">
+                            <label for="one-star-check">
+                                <i class="fa-solid fa-star fa-2xs"></i>
+                            </label>
+                        </div>
+                        <div class="options">
+                            <input type="checkbox" class="dif-check" id="two-stars-check" value="two-stars">
+                            <label for="two-stars-check">
+                                <i class="fa-solid fa-star fa-2xs"></i>
+                                <i class="fa-solid fa-star fa-2xs"></i>
+                            </label>
+                        </div>
+                        <div class="options">
+                            <input type="checkbox" class="dif-check" id="three-stars-check" value="three-stars">
+                            <label for="three-stars-check">
+                                <i class="fa-solid fa-star fa-2xs"></i>
+                                <i class="fa-solid fa-star fa-2xs"></i>
+                                <i class="fa-solid fa-star fa-2xs"></i>
+                            </label>
+                        </div>
+                        <div class="options">
+                            <input type="checkbox" class="dif-check" id="four-stars-check" value="four-stars">
+                            <label for="four-stars-check">
+                                <i class="fa-solid fa-star fa-2xs"></i>
+                                <i class="fa-solid fa-star fa-2xs"></i>
+                                <i class="fa-solid fa-star fa-2xs"></i>
+                                <i class="fa-solid fa-star fa-2xs"></i>
+                            </label>
+                        </div>
+                        <div class="options">
+                            <input type="checkbox" class="dif-check" id="five-stars-check" value="five-stars">
+                            <label for="five-stars-check">
+                                <i class="fa-solid fa-star fa-2xs"></i>
+                                <i class="fa-solid fa-star fa-2xs"></i>
+                                <i class="fa-solid fa-star fa-2xs"></i>
+                                <i class="fa-solid fa-star fa-2xs"></i>
+                                <i class="fa-solid fa-star fa-2xs"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="portfolio-division"></div>
+                    <!--Portfolio items-->
+                    <div class="portfolio-items">
+                        <div class="portfolio-item htmlcss javascript one-star" onclick="window.open('https://github.com/Leony99/Study-projects/tree/main/VSCode/1.%20Analog%20clock%20-%20HTML-CSS-JS');">
+                            <div class="item-title">
+                                <div class="item-line"></div>
+                                <h3>Analog clock</h3>
+                                <div class="item-line"></div>
+                            </div>
+                            <div class="item-information">
+                                <p>Languages:</p>
+                                <i class="fa-brands fa-html5" style="color: rgba(227, 76, 38, var(--opacity))"></i>
+                                <i class="fa-brands fa-css3-alt" style="color:rgba(41, 101, 241, var(--opacity))"></i>
+                                <i class="fa-brands fa-js" style="color: rgba(240, 219, 79, var(--opacity))"></i>
+                            </div>
+                            <div class="item-information">
+                                <p>Frameworks:</p>
+                            </div>
+                            <div class="item-information">
+                                <p>Difficulty:</p>
+                                <i class="fa-solid fa-star fa-xs"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-item htmlcss javascript one-star" onclick="window.open('https://github.com/Leony99/Study-projects/tree/main/VSCode/2.%20Digital%20clock%20-%20HTML-CSS-JS');">
+                            <div class="item-title">
+                                <div class="item-line"></div>
+                                <h3>Digital clock</h3>
+                                <div class="item-line"></div>
+                            </div>
+                            <div class="item-information">
+                                <p>Languages:</p>
+                                <i class="fa-brands fa-html5" style="color: rgba(227, 76, 38, var(--opacity))"></i>
+                                <i class="fa-brands fa-css3-alt" style="color:rgba(41, 101, 241, var(--opacity))"></i>
+                                <i class="fa-brands fa-js" style="color: rgba(240, 219, 79, var(--opacity))"></i>
+                            </div>
+                            <div class="item-information">
+                                <p>Frameworks:</p>
+                            </div>
+                            <div class="item-information">
+                                <p>Difficulty:</p>
+                                <i class="fa-solid fa-star fa-xs"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-item htmlcss javascript one-star" onclick="window.open('https://github.com/Leony99/Study-projects/tree/main/VSCode/3.%20Simple%20form%20-%20HTML-CSS-JS');">
+                            <div class="item-title">
+                                <div class="item-line"></div>
+                                <h3>Simple form</h3>
+                                <div class="item-line"></div>
+                            </div>
+                            <div class="item-information">
+                                <p>Languages:</p>
+                                <i class="fa-brands fa-html5" style="color: rgba(227, 76, 38, var(--opacity))"></i>
+                                <i class="fa-brands fa-css3-alt" style="color:rgba(41, 101, 241, var(--opacity))"></i>
+                                <i class="fa-brands fa-js" style="color: rgba(240, 219, 79, var(--opacity))"></i>
+                            </div>
+                            <div class="item-information">
+                                <p>Frameworks:</p>
+                            </div>
+                            <div class="item-information">
+                                <p>Difficulty:</p>
+                                <i class="fa-solid fa-star fa-xs"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-item htmlcss javascript one-star" onclick="window.open('https://github.com/Leony99/Study-projects/tree/main/VSCode/4.%20CI%20Calculator%20-%20HTML-CSS-JS');">
+                            <div class="item-title">
+                                <div class="item-line"></div>
+                                <h3>CI calculator</h3>
+                                <div class="item-line"></div>
+                            </div>
+                            <div class="item-information">
+                                <p>Languages:</p>
+                                <i class="fa-brands fa-html5" style="color: rgba(227, 76, 38, var(--opacity))"></i>
+                                <i class="fa-brands fa-css3-alt" style="color:rgba(41, 101, 241, var(--opacity))"></i>
+                                <i class="fa-brands fa-js" style="color: rgba(240, 219, 79, var(--opacity))"></i>
+                            </div>
+                            <div class="item-information">
+                                <p>Frameworks:</p>
+                            </div>
+                            <div class="item-information">
+                                <p>Difficulty:</p>
+                                <i class="fa-solid fa-star fa-xs"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-item htmlcss javascript one-star" onclick="window.open('https://github.com/Leony99/Study-projects/tree/main/VSCode/5.%20Simple%20calculator%20-%20HTML-CSS-JS');">
+                            <div class="item-title">
+                                <div class="item-line"></div>
+                                <h3>Simple calculator</h3>
+                                <div class="item-line"></div>
+                            </div>
+                            <div class="item-information">
+                                <p>Languages:</p>
+                                <i class="fa-brands fa-html5" style="color: rgba(227, 76, 38, var(--opacity))"></i>
+                                <i class="fa-brands fa-css3-alt" style="color:rgba(41, 101, 241, var(--opacity))"></i>
+                                <i class="fa-brands fa-js" style="color: rgba(240, 219, 79, var(--opacity))"></i>
+                            </div>
+                            <div class="item-information">
+                                <p>Frameworks:</p>
+                            </div>
+                            <div class="item-information">
+                                <p>Difficulty:</p>
+                                <i class="fa-solid fa-star fa-xs"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-item htmlcss javascript one-star" onclick="window.open('https://github.com/Leony99/Study-projects/tree/main/VSCode/6.%20Task%20list%20-%20HTML-CSS-JS');">
+                            <div class="item-title">
+                                <div class="item-line"></div>
+                                <h3>Task list</h3>
+                                <div class="item-line"></div>
+                            </div>
+                            <div class="item-information">
+                                <p>Languages:</p>
+                                <i class="fa-brands fa-html5" style="color: rgba(227, 76, 38, var(--opacity))"></i>
+                                <i class="fa-brands fa-css3-alt" style="color:rgba(41, 101, 241, var(--opacity))"></i>
+                                <i class="fa-brands fa-js" style="color: rgba(240, 219, 79, var(--opacity))"></i>
+                            </div>
+                            <div class="item-information">
+                                <p>Frameworks:</p>
+                            </div>
+                            <div class="item-information">
+                                <p>Difficulty:</p>
+                                <i class="fa-solid fa-star fa-xs"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-item htmlcss javascript two-stars" onclick="window.open('https://github.com/Leony99/Portfolio-site');">
+                            <div class="item-title">
+                                <div class="item-line"></div>
+                                <h3>Portfolio site(this)</h3>
+                                <div class="item-line"></div>
+                            </div>
+                            <div class="item-information">
+                                <p>Languages:</p>
+                                <i class="fa-brands fa-html5" style="color: rgba(227, 76, 38, var(--opacity))"></i>
+                                <i class="fa-brands fa-css3-alt" style="color:rgba(41, 101, 241, var(--opacity))"></i>
+                                <i class="fa-brands fa-js" style="color: rgba(240, 219, 79, var(--opacity))"></i>
+                            </div>
+                            <div class="item-information">
+                                <p>Frameworks:</p>
+                            </div>
+                            <div class="item-information">
+                                <p>Difficulty:</p>
+                                <i class="fa-solid fa-star fa-xs"></i>
+                                <i class="fa-solid fa-star fa-xs"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-item java two-stars" onclick="window.open('https://github.com/Leony99/Study-projects/tree/main/IntelliJ/1.%20Calculadora%20de%20matrizes%20-%20Java');">
+                            <div class="item-title">
+                                <div class="item-line"></div>
+                                <h3>Matrix calculator</h3>
+                                <div class="item-line"></div>
+                            </div>
+                            <div class="item-information">
+                                <p>Languages:</p>
+                                <i class="fa-brands fa-java" style="color: rgba(237, 29, 37, var(--opacity))"></i>
+                            </div>
+                            <div class="item-information">
+                                <p>Frameworks:</p>
+                            </div>
+                            <div class="item-information">
+                                <p>Difficulty:</p>
+                                <i class="fa-solid fa-star fa-xs"></i>
+                                <i class="fa-solid fa-star fa-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Section End-->
+            <div class="section-end">
+                <p class="end-txt">Contact</p>
+                <a class= "end-icon" href="#contact">
+                    <i class="fa-solid fa-circle-down"></i>
+                </a>
+            </div>
+        </section>
+        <!--Section contact-->
+        <section class="section-contact" id="contact">
+            <h4>Get in touch with me:</h4>
+            <div class="contacts">
+                <i class="fa-solid fa-envelope fa-lg"></i>
+                <p>costa.leony2@gmail.com</p>
+            </div>
+            <div class="contacts">
+                <i class="fa-brands fa-whatsapp fa-lg"></i>
+                <p>(21)990094473</p>
+            </div>
+            <h4>Or find me on:</h4>
+            <div class="socials">
+                <a href="https://github.com/Leony99" target="_blank">
+                    <i class="fa-brands fa-github fa-lg"></i>
+                    <p>Github</p>
+                </a>
+                <!--<a href="">
+                    <i class="fa-brands fa-linkedin fa-lg"></i>
+                    <p>LinkedIn</p>
+                </a>-->
+            </div>
+        </section>
+    </body>
+</html>
