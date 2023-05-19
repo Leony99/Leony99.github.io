@@ -1,4 +1,33 @@
-/*Text change*/
+/*Hide navbar*/
+let prevScrollpos = window.pageYOffset;
+window.addEventListener("scroll", function() {
+    let currentScrollPos = window.pageYOffset;
+
+    if (prevScrollpos > currentScrollPos) {
+        document.querySelector(".nav").style.top = "0";
+    } else {
+        document.querySelector(".nav").style.top = "-9vh";
+    }
+    prevScrollpos = currentScrollPos;
+});
+
+/*Navbar email contact + warning*/
+const contactsMail = document.querySelector(".contacts-mail");
+const warning = document.querySelector(".warning");
+contactsMail.addEventListener("click", function(e) {
+  e.preventDefault();
+  navigator.clipboard.writeText("costa.leony2@gmail.com");
+
+  setTimeout(() => {
+    warning.innerHTML = "Email copied!";
+    warning.classList.add("warning-vis");
+  }, 0);
+  setTimeout(() => {
+    warning.classList.remove("warning-vis");
+  }, 3000);
+});
+
+/*Home text change*/
 const text = document.querySelector(".home-txt-2");
 function textChange() {
     setTimeout(() => {
@@ -11,19 +40,6 @@ function textChange() {
 
 textChange();
 setInterval(textChange, 8000);
-
-/*Hide navbar*/
-let prevScrollpos = window.pageYOffset;
-window.addEventListener("scroll", function() {
-    let currentScrollPos = window.pageYOffset;
-
-    if (prevScrollpos > currentScrollPos) {
-        document.querySelector(".nav").style.top = "0";
-    } else {
-        document.querySelector(".nav").style.top = "-10vh";
-    }
-    prevScrollpos = currentScrollPos;
-});
 
 /*Portfolio filter*/
 const checkboxes = document.querySelectorAll("input[type=checkbox]");

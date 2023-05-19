@@ -15,6 +15,9 @@
 
 body {
     overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
 }
 
 ::-webkit-scrollbar {
@@ -26,26 +29,48 @@ body {
     position: fixed;
 
     width: 100vw;
-    height: 10vh;
+    height: 9vh;
 
     background-color: rgba(1, 15, 51, 1);
     color: rgba(255, 255, 255, 1);
     font-size: larger;
 
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     z-index: 100;
     transition: top 0.4s;
 }
 
+.title {
+    width: 25%;
+    height: 100%;
+
+    padding-left: 5%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .menu {
-    width: 100%;
+    width: 50%;
     height: 100%;
 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.contacts {
+    width: 25%;
+    height: 100%;
+
+    padding-right: 5%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5%;
 }
 
 .menu-item {
@@ -61,6 +86,16 @@ body {
 
 .menu-item a {
     color: white;
+}
+
+.contacts a{
+    color: white;
+
+    cursor: pointer;
+}
+
+.contacts a:hover i{
+    animation: shake 0.5s;
 }
 
 /*---------------Section Home---------------*/
@@ -173,7 +208,7 @@ body {
 
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 
     overflow-y: scroll;
 }
@@ -189,7 +224,7 @@ body {
 
 .skill-bar-body {
     width: 100%;
-    height: 16px;
+    height: 10px;
 
     background-color: rgb(2, 26, 87);
     border-radius: 100px;
@@ -272,7 +307,7 @@ body {
 
 .section-portfolio-a {
     width: 100%;
-    height: 85%;
+    height: 100%;
 
     padding: 50px;
 
@@ -423,50 +458,6 @@ body {
     --opacity: 1;
 }
 
-/*---------------Section Contact---------------*/
-.section-contact {
-    width: 100vw;
-
-    background-color: rgb(1, 15, 51);
-    color: white;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.section-contact h4 {
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
-
-.contacts {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
-
-.socials {
-    margin-bottom: 40px;
-
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.socials a {
-    color: white;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    gap: 5px;
-}
-
 /*---------------Section End---------------*/
 .section-end {
     width: 100%;
@@ -503,6 +494,35 @@ body {
 
 .end-icon:hover i {
     animation: shake 0.5s;
+}
+
+/*---------------Warning---------------*/
+.warning {
+    position: fixed;
+    bottom: 5vh;
+    align-self: center;
+
+    background-color: rgb(255, 255, 255, 0);
+    color: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: small;
+
+    transition: 0.5s;
+    visibility: hidden;
+    z-index: 50;
+}
+
+.warning.warning-vis {
+    bottom: 2vh;
+
+    background-color: rgb(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    border: 1px solid rgba(0, 0, 0, 1);
+
+    transition: 0.5s;
+    visibility: visible;
 }
 
 /*---------------Animations---------------*/
