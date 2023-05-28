@@ -49,40 +49,40 @@ checkboxes.forEach(checkbox => {
     checkbox.addEventListener("change", function() {
       /*Get values of checked checkboxes*/
       const langCheckboxes = document.querySelectorAll(".lang-check[type=checkbox]:checked");
-      const frameCheckboxes = document.querySelectorAll(".frame-check[type=checkbox]:checked");
+      const tecCheckboxes = document.querySelectorAll(".tec-check[type=checkbox]:checked");
       const difCheckboxes = document.querySelectorAll(".dif-check[type=checkbox]:checked");
 
       const langCheckboxesValues = [];
-      const frameCheckboxesValues = [];
+      const tecCheckboxesValues = [];
       const difCheckboxesValues = [];
 
       langCheckboxes.forEach(element => {
         langCheckboxesValues.push(element.value);
       });
 
-      frameCheckboxes.forEach(element => {
-        frameCheckboxesValues.push(element.value);
+      tecCheckboxes.forEach(element => {
+        tecCheckboxesValues.push(element.value);
       });
 
       difCheckboxes.forEach(element => {
         difCheckboxesValues.push(element.value);
       });
 
-      console.log(langCheckboxesValues, frameCheckboxesValues, difCheckboxesValues)
+      console.log(langCheckboxesValues, tecCheckboxesValues, difCheckboxesValues)
 
       /*Compare classes of each item with values of checked checkboxes*/
       items.forEach(element => {
         const classList = element.className.split(" ");
         langMatches = false;
-        frameMatches = false;
+        tecMatches = false;
         difMatches = false;
 
         classList.forEach(element => {
           if (langCheckboxesValues.includes(element)) {
             langMatches = true;
           };
-          if (frameCheckboxesValues.includes(element)) {
-            frameMatches = true;
+          if (tecCheckboxesValues.includes(element)) {
+            tecMatches = true;
           };
           if (difCheckboxesValues.includes(element)) {
             difMatches = true;
@@ -90,7 +90,7 @@ checkboxes.forEach(checkbox => {
         });
 
         /*only language checkboxes checked*/
-        if (langCheckboxesValues.length > 0 && frameCheckboxesValues.length == 0 && difCheckboxesValues.length == 0) {
+        if (langCheckboxesValues.length > 0 && tecCheckboxesValues.length == 0 && difCheckboxesValues.length == 0) {
           if (langMatches) {
             element.style.display = "flex"
           }
@@ -99,8 +99,8 @@ checkboxes.forEach(checkbox => {
           }
         }
         /*only framework checkboxes checked*/
-        else if (langCheckboxesValues.length == 0 && frameCheckboxesValues.length > 0 && difCheckboxesValues.length == 0) {
-          if (frameMatches) {
+        else if (langCheckboxesValues.length == 0 && tecCheckboxesValues.length > 0 && difCheckboxesValues.length == 0) {
+          if (tecMatches) {
             element.style.display = "flex"
           }
           else {
@@ -108,7 +108,7 @@ checkboxes.forEach(checkbox => {
           }
         }
         /*only difficulty checkboxes checked*/
-        else if (langCheckboxesValues.length == 0 && frameCheckboxesValues.length == 0 && difCheckboxesValues.length > 0) {
+        else if (langCheckboxesValues.length == 0 && tecCheckboxesValues.length == 0 && difCheckboxesValues.length > 0) {
           if (difMatches) {
             element.style.display = "flex"
           }
@@ -117,8 +117,8 @@ checkboxes.forEach(checkbox => {
           }
         }
         /*only language and framework checkboxes checked*/
-        else if (langCheckboxesValues.length > 0 && frameCheckboxesValues.length > 0 && difCheckboxesValues.length == 0) {
-          if (langMatches && frameMatches) {
+        else if (langCheckboxesValues.length > 0 && tecCheckboxesValues.length > 0 && difCheckboxesValues.length == 0) {
+          if (langMatches && tecMatches) {
             element.style.display = "flex"
           }
           else {
@@ -126,7 +126,7 @@ checkboxes.forEach(checkbox => {
           }
         }
         /*only language and difficulty checkboxes checked*/
-        else if (langCheckboxesValues.length > 0 && frameCheckboxesValues.length == 0 && difCheckboxesValues.length > 0) {
+        else if (langCheckboxesValues.length > 0 && tecCheckboxesValues.length == 0 && difCheckboxesValues.length > 0) {
           if (langMatches && difMatches) {
             element.style.display = "flex"
           }
@@ -135,8 +135,8 @@ checkboxes.forEach(checkbox => {
           }
         }
         /*only framework and difficulty checkboxes checked*/
-        else if (langCheckboxesValues.length == 0 && frameCheckboxesValues.length > 0 && difCheckboxesValues.length > 0) {
-          if (frameMatches && difMatches) {
+        else if (langCheckboxesValues.length == 0 && tecCheckboxesValues.length > 0 && difCheckboxesValues.length > 0) {
+          if (tecMatches && difMatches) {
             element.style.display = "flex"
           }
           else {
@@ -144,8 +144,8 @@ checkboxes.forEach(checkbox => {
           }
         }
         /*language, framework and difficulty checkboxes checked*/
-        else if (langCheckboxesValues.length > 0 && frameCheckboxesValues.length > 0 && difCheckboxesValues.length > 0) {
-          if (langMatches && frameMatches && difMatches) {
+        else if (langCheckboxesValues.length > 0 && tecCheckboxesValues.length > 0 && difCheckboxesValues.length > 0) {
+          if (langMatches && tecMatches && difMatches) {
             element.style.display = "flex"
           }
           else {
