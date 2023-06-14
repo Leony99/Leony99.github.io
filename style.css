@@ -322,19 +322,33 @@ body {
 }
 
 .portfolio-filter {
+    min-width:fit-content;
     height: 100%;
 
-    padding: 20px;
-    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    overflow-y: auto;
 }
 
 .portfolio-filter h3 {
     margin-top: 10px;
+}
+
+.portfolio-filter::-webkit-scrollbar {
+    width: 5px;
+}
+
+.portfolio-filter::-webkit-scrollbar-track {
+    box-shadow: inset 0px 0px 20px rgba(255, 255, 255, 0.5);
+}
+
+.portfolio-filter::-webkit-scrollbar-thumb {
+    background-color: white;
 }
 
 .options {
@@ -491,23 +505,23 @@ body {
 /*---------------Warning---------------*/
 .warning {
     position: fixed;
-    bottom: 5vh;
-    align-self: center;
+    top: 9vh;
+    left: 100vw;
 
     background-color: rgb(255, 255, 255, 0);
     color: rgba(0, 0, 0, 0);
     border: 1px solid rgba(0, 0, 0, 0);
     padding-left: 5px;
     padding-right: 5px;
-    font-size: small;
+    white-space: nowrap;
 
     transition: 0.5s;
     visibility: hidden;
-    z-index: 50;
+    z-index: 100;
 }
 
 .warning.warning-vis {
-    bottom: 2vh;
+    left: calc(100vw - 121.2px);
 
     background-color: rgb(255, 255, 255, 1);
     color: rgba(0, 0, 0, 1);
