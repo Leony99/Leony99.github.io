@@ -38,7 +38,7 @@ body {
     display: flex;
     align-items: center;
     z-index: 100;
-    transition: top 0.4s;
+    transition: top 0.5s;
 }
 
 .title {
@@ -505,30 +505,28 @@ body {
 /*---------------Warning---------------*/
 .warning {
     position: fixed;
-    top: 9vh;
     left: 100vw;
 
-    background-color: rgb(255, 255, 255, 0);
-    color: rgba(0, 0, 0, 0);
-    border: 1px solid rgba(0, 0, 0, 0);
-    padding-left: 5px;
-    padding-right: 5px;
-    white-space: nowrap;
-
-    transition: 0.5s;
-    visibility: hidden;
-    z-index: 100;
-}
-
-.warning.warning-vis {
-    left: calc(100vw - 121.2px);
+    width: 25%;
+    height: 9vh;
 
     background-color: rgb(255, 255, 255, 1);
     color: rgba(0, 0, 0, 1);
     border: 1px solid rgba(0, 0, 0, 1);
+    white-space: nowrap;
 
-    transition: 0.5s;
-    visibility: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: top 0.5s, left 0.5s;
+    z-index: 101;
+}
+
+.warning.warning-vis {
+    left: calc(100vw - 25%);
+
+    transition: top 0.5s, left 0.5s;
 }
 
 /*---------------Animations---------------*/

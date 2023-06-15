@@ -1,19 +1,22 @@
+/*NAVBAR*/
+const nav = document.querySelector(".nav");
+const warning = document.querySelector(".warning");
+const contactsMail = document.querySelector(".contacts-mail");
 /*Hide navbar*/
 let prevScrollpos = window.pageYOffset;
 window.addEventListener("scroll", function() {
     let currentScrollPos = window.pageYOffset;
 
     if (prevScrollpos > currentScrollPos) {
-        document.querySelector(".nav").style.top = "0";
+        nav.style.top = "0";
+        warning.style.top = "0";
     } else {
-        document.querySelector(".nav").style.top = "-9vh";
+        nav.style.top = "-9vh";
+        warning.style.top = "-9vh";
     }
     prevScrollpos = currentScrollPos;
 });
-
-/*Navbar email contact + warning*/
-const contactsMail = document.querySelector(".contacts-mail");
-const warning = document.querySelector(".warning");
+/*Copy email contact + send warning*/
 contactsMail.addEventListener("click", function(e) {
   e.preventDefault();
   navigator.clipboard.writeText("costa.leony2@gmail.com");
@@ -27,8 +30,9 @@ contactsMail.addEventListener("click", function(e) {
   }, 3000);
 });
 
-/*Home text change*/
+/*HOME*/
 const text = document.querySelector(".home-txt-2");
+/*Home text change*/
 function textChange() {
     setTimeout(() => {
         text.textContent = "I'm Leony.";
@@ -41,10 +45,10 @@ function textChange() {
 textChange();
 setInterval(textChange, 8000);
 
-/*Portfolio filter*/
+/*PORTFOLIO*/
 const checkboxes = document.querySelectorAll("input[type=checkbox]");
 const items = document.querySelectorAll(".portfolio-item");
-
+/*Portfolio filter*/
 checkboxes.forEach(checkbox => {
     checkbox.addEventListener("change", function() {
       /*Get values of checked checkboxes*/
